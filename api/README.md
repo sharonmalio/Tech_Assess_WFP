@@ -47,4 +47,21 @@ i.e. `git clone https://github.com/sharonmalio/Tech_Assess_WFP.git`
 4. Run the application on localhost
     `python manage.py runserver`
 
+## TESTING
+* Used Postman API collaboration platform for Automated API testing and for the CLient development side
+
+## DEPLOYMENT and hosting
+ * Used Heroku: Cloud Application Platform, to deploy and host the application
  
+## SCREENSHOTS
+
+![THE FIRST PAGE](api/images/API-ROOT.png)
+
+ * Click on the GET action and choose API to view the data or JSON to view the data in JSON Format
+ ![API Data](api/images/API.png)
+
+ ![Filters](api/images/Filters.png)
+  
+ ![pagination](api/images/Pagination.png)
+  
+ ![JSON data format](api/images/JSON.png)
