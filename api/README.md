@@ -35,8 +35,10 @@ in the generated objects.
 14. whitenoise==5.0.1
 
 ### Installation on local machine
-
-1. Create a virtual environment using the command below where "myenv" is the environment name
+1. Clone the repo in to your local machine
+i.e. `git clone https://github.com/sharonmalio/Tech_Assess_WFP.git`
+2. Cd into the repo and copi the `api` folder into a separate folder
+1. Cd in the `api` folder and create a virtual environment using the command below where "myenv" is the environment name
  `virtualenv -p python3 myenv`
 2. Activate the virtual environment.
 ` source myenv/bin/activate`
