@@ -47,13 +47,13 @@ i.e. `git clone https://github.com/sharonmalio/Tech_Assess_WFP.git`
 4. Run the application on localhost
     `python manage.py runserver`
 
-## TESTING
+## Testing
 * Used Postman API collaboration platform for Automated API testing and for the CLient development side
 
-## DEPLOYMENT and hosting
+## Deployment and Hosting
  * Used Heroku: Cloud Application Platform, to deploy and host the application
  
-## SCREENSHOTS
+## Screenshots
 
 ![THE FIRST PAGE](api/images/API-ROOT.png)
 

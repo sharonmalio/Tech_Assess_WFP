@@ -41,6 +41,7 @@ class Expectancy extends Component {
     }
 
     componentDidMount(){
+        console.log(this.props.location.query)
         this.props.fetchData()
     }
 }
