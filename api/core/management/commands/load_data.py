@@ -6,6 +6,7 @@ from core.constants import DEFAULT_DATA
 from core.models import WHOLifeExpectancy
 
 
+
 def load_data():
     """Function to help with handling data"""
     facts = DEFAULT_DATA['fact']
@@ -24,10 +25,13 @@ def load_data():
             **data
         )
 
-#similiar setup with runserver
+
+#  similiar setup with runserver
+
 class Command(BaseCommand):
     help = 'Load data from constants file'
-    #overwritting handle to allow
+
+    #  overwritting handle to allow
     def handle(self, *args, **options):
         try:
             load_data()

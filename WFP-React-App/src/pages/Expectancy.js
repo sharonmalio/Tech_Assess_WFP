@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import  queryString from 'query-string'
 import { fetchDataInit } from '../redux/actions'
 // import Pagination from './pagination'
 
@@ -9,8 +9,9 @@ import './Expectancy.css'
 class Expectancy extends Component {
     render() {
         return (
+    
             <div className="tableLayout">
-               {/* <tr><h1 id='title'>Life Expectancy Data at birth and at 60 years</h1></tr> */}
+                {/* <h1>Life Expectancy Data at birth and at 60 years</h1> */}
                 <table id = "expe" border="1">
                     <thead>
                         <tr>
@@ -34,17 +35,13 @@ class Expectancy extends Component {
                     </tbody>
                 </table>
 
-
             </div>
         )
     }
 
     componentDidMount(){
-        // console.log(this.props.location.query)
-        console.log(this.props)
-        this.props.fetchData()
-     
-        // console.log(this.props.match.params)
+        const params = queryString.parse(this.props.location.search);
+        this.props.fetchData(params)
     }
 }
 
