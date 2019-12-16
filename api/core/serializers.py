@@ -8,5 +8,5 @@ class DataSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WHOLifeExpectancy
-        fields = ('GHO', 'region', 'year', 'sex', 'number_of_years')
-        # read_only_fields = ('GHO', 'region', 'year', 'sex', 'number_of_years')
+        fields = ('GHO', 'region', 'year', 'sex','number_of_years')
+        # read_only_fields = ('GHO', 'region', 'year', 'sex', )

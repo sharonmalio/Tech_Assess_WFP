@@ -15,9 +15,8 @@ class Expectancy extends Component {
                 <table border="1">
                     <thead>
                         <tr>
-                        <th>Region</th>
+                            <th>Region</th>
                             <th>GHO</th>
-                            
                             <th>year</th>
                             <th>sex</th>
                             <th>Number_of_years</th>
@@ -28,7 +27,6 @@ class Expectancy extends Component {
                             <tr key={index}>
                                  <td>{item.region}</td>
                                 <td>{item.GHO}</td>
-                               
                                 <td>{item.year}</td>
                                 <td>{item.sex}</td>
                                 <td>{item.number_of_years}</td>
