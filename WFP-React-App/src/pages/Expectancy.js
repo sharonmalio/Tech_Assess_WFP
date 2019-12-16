@@ -11,7 +11,8 @@ class Expectancy extends Component {
         return (
     
             <div className="tableLayout">
-                {/* <h1>Life Expectancy Data at birth and at 60 years</h1> */}
+                <div className="header">
+                <h1>Life Expectancy Data at birth and at 60 years</h1>
                 <table id = "expe" border="1">
                     <thead>
                         <tr>
@@ -34,7 +35,7 @@ class Expectancy extends Component {
                             )}
                     </tbody>
                 </table>
-
+                </div>
             </div>
         )
     }

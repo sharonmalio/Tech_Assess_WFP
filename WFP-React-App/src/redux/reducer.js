@@ -10,7 +10,7 @@ export default (state = initialState, { type, payload }) => {
     case FETCH_DATA_SUCCESS:
         return {
             ...state,
-            data: payload.results
+            data: payload
         }
 
     case FETCH_DATA_FAILURE:
