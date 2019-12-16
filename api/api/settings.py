@@ -12,6 +12,9 @@ https://docs.djangoproject.com/n/2.2/ref/settings/
 
 import os
 import django_heroku
+import corsheaders
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,10 +44,13 @@ INSTALLED_APPS = [
     # installed apps
     'core.apps.CoreConfig',
     'rest_framework',
-    'django_filters'
+    'django_filters',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # new
+    'django.middleware.common.CommonMiddleware', # new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,3 +140,7 @@ DATA_FILE = os.path.join(BASE_DIR, 'core/data.json')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+#
+# CORS_ORIGIN_WHITELIST = (
+#     'https:/localhost:3000/'
+# )

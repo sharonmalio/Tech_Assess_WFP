@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { fetchDataInit } from '../redux/actions'
-
+// import Pagination from './pagination'
 
 import './Expectancy.css'
+
 
 
 class Expectancy extends Component {
@@ -14,8 +15,9 @@ class Expectancy extends Component {
                 <table border="1">
                     <thead>
                         <tr>
+                        <th>Region</th>
                             <th>GHO</th>
-                            <th>Region</th>
+                            
                             <th>year</th>
                             <th>sex</th>
                             <th>Number_of_years</th>
@@ -24,8 +26,9 @@ class Expectancy extends Component {
                     <tbody>
                         {this.props.data.map((item, index) =>
                             <tr key={index}>
+                                 <td>{item.region}</td>
                                 <td>{item.GHO}</td>
-                                <td>{item.region}</td>
+                               
                                 <td>{item.year}</td>
                                 <td>{item.sex}</td>
                                 <td>{item.number_of_years}</td>
@@ -40,7 +43,7 @@ class Expectancy extends Component {
     }
 
     componentDidMount(){
-        this.props.fetchData({page:1, sex:'Female' })
+        this.props.fetchData()
     }
 }
 
