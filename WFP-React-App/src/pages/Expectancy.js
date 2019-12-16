@@ -6,13 +6,12 @@ import { fetchDataInit } from '../redux/actions'
 
 import './Expectancy.css'
 
-
-
 class Expectancy extends Component {
     render() {
         return (
             <div className="tableLayout">
-                <table border="1">
+               {/* <tr><h1 id='title'>Life Expectancy Data at birth and at 60 years</h1></tr> */}
+                <table id = "expe" border="1">
                     <thead>
                         <tr>
                             <th>Region</th>
@@ -41,8 +40,11 @@ class Expectancy extends Component {
     }
 
     componentDidMount(){
-        console.log(this.props.location.query)
+        // console.log(this.props.location.query)
+        console.log(this.props)
         this.props.fetchData()
+     
+        // console.log(this.props.match.params)
     }
 }
 
@@ -57,5 +59,13 @@ const mapStateToProps = state => {
       fetchData: data => dispatch(fetchDataInit(data))
     }
   }
-
+ 
+//   renderTableHeader();{
+//     let header = Object.keys(this.state.students[0])
+//     return header.map((key, index) => {
+//        return <th key={index}>{key.toUpperCase()}</th>
+//     })
+//  }
 export default connect(mapStateToProps, mapDispatchToProps)(Expectancy);
+
+
